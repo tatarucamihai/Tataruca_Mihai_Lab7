@@ -8,11 +8,7 @@ public partial class ListEntryPage : ContentPage
 	{
 		InitializeComponent();
 	}
-    protected override async void OnAppearing()
-    {
-        base.OnAppearing();
-        listView.ItemsSource = await App.Database.GetShopListsAsync();
-    }
+    
     async void OnShopListAddedClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new ListPage
